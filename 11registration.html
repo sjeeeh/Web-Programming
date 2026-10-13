@@ -1,0 +1,85 @@
+<html><head>
+<title>Studentregistration</title>
+
+<body>
+<h1>STUDENT REGISTRATION FORM</h1>
+<form>
+<table border=1>
+
+<tr>
+<td>FIRTS NAME:</td>
+<td><input type="text"></td>
+</tr>
+
+<tr>
+<td>LAST NAME:</td>
+<td><input type="text"></td>
+</tr>
+
+<tr>
+<td>EMAIL ID:</td>
+<td><input type="text"></td>
+</tr>
+
+<tr>
+<td>DOB:</td>
+<td><input type="date"></td>
+</tr>
+
+<tr>
+<td>MOBILE NUMBER:</td>
+<td><input type="text"></td>
+</tr>
+
+<tr><td>GENDER:</td><td>
+<label for="male"><input type="radio" id="male" name="gender" value="male"> Male</label>
+<label for="female"><input type="radio" id="female" name="gender" value="female"> Female</label></td></tr>
+
+<tr><td>ADDRESS:</td><td><textarea></textarea></td></tr>
+
+<tr><td>CITY:</td><td><input type="text" maxlength=30>(max 30 characters)</td></tr>
+
+<tr><td>PIN CODE:</td><td><input type="text" maxlength=6>(6 digit numbers)</td></tr>
+
+<tr><td>STATE:</td><td><input type="text"></td></tr>
+
+<tr><td>COUNTRY:</td><td><input type="text"></td></tr>
+
+<tr><td>HOBBIES:</td><td>
+<label for="hdancing">
+<input type="checkbox" id="hdancing" name="hobbies" value="dancing">Dancing</label>
+<label for="hsinging">
+<input type="checkbox" id="hsinging" name="hobbies" value="singing">Singing</label>
+<label for="hpainting">
+<input type="checkbox" id="hpainting" name="hobbies" value="painting">Painting</label>
+<label for="hother">
+<input type="checkbox" id="hother" name="hobbies" value="other">Other<input type="text" id="hothertext" name="hobby_other_text"></label>
+</td></tr>
+
+<tr><td>Qualification:</td><td>
+<table>
+<tr><th>SL NO</th><th>Examination</th><th>BOARD</th><th>PERCENTAGE</th><th>YEAR OF PASSING</th></tr>
+<tr><td>1</td><td>class x</td><td><input type="text" maxlength=10></td><td><input type="text"></td><td><input type="text"></td></tr>
+<tr><td>2</td><td>class xii</td><td><input type="text" maxlength=10></td><td><input type="text"></td><td><input type="text"></td></tr>
+<tr><td>3</td><td>degree</td><td><input type="text" maxlength=10></td><td><input type="text"></td><td><input type="text"></td></tr>
+<tr><td>4</td><td>masters</td><td><input type="text" maxlength=10></td><td><input type="text"></td><td><input type="text"></td></tr>
+<tr><td></td><td></td><td>(10 characters)</td><td>(upto 2 decimals)</td><td></td></tr>
+</table>
+</td></tr>
+
+<tr><td>COURSE APPLIED FOR:</td><td>
+<label for="mca"><input type="radio" id="mca" name="course" value="mca">MCA </label>
+<label for="mtech"><input type="radio" id="mtech" name="course" value="mtech">M.Tech </label>
+<label for="msc"><input type="radio" id="msc" name="course" value="msc">M.Sc </label>
+<label for="phd"><input type="radio" id="phd" name="course" value="phd">Ph.D </label></td></tr>
+
+<tr><td colspan="2">PASSWORD:<input type="password" name="password-id" maxlenth=30>(max 30 characters)</td></tr>
+
+<tr><td>Date of TC:</td><td><input type="date"></td></tr>
+
+<tr><td colspan="2" align="center"><input type="submit" value="SUBMIT"><input type="reset" value="RESET"></td></tr>
+
+</table>
+</form>
+</body>
+</html>

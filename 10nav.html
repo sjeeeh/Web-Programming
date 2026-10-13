@@ -1,0 +1,90 @@
+<html><head>
+<title>navbardiv</title>
+<style>
+body{
+ height:100%;
+ display:flex;
+}
+.sidenav{
+  height:100%;
+  width:160px;
+  padding-top:20px;
+  background-color:green;
+  position:fixed;
+  top:0;
+  left:0;
+}
+.content{
+  margin-left:160px;
+  padding:0px 10px;
+  height:2000px;
+}
+.page{
+  display:none;
+}
+.page:target{
+  display:block;
+}
+a{
+  display:block;
+  text-decoration:none;
+  padding: 6px 8px 6px 16px;
+  color:white;
+}
+a:hover{
+  color:red;
+}
+#main{
+ margin-bottom:100px;
+ display:block;
+}
+</style></head>
+<body>
+<div class="sidenav">
+<a href="#about">About us</a>
+<a href="#departments">Departments</a>
+<a href="#vision">Vision & Mission</a>
+<a href="#contact">Contact us</a>
+</div>
+<div class="content">
+
+<div id="main">
+<h1>side bar example</h1>
+</div>
+
+<div id="about" class="page">
+<h2>MEA Engineering College</h2><p>MEA Engineering College is the first NAAC accredited self-financing engineering college in Malappuram district which is committed to provide excellent and value-based education with a flair for ethics and professionalism. The institution is affiliated to the APJ Abdul Kalam Technological University and approved by the AICTE.</p>
+</div>
+
+<div id="departments" class="page">
+<h2>Departments</h2>
+<ul>
+<li>Civil Engineering</li>
+<li>Electrical & Electrics</li>
+<li>Information Technology</li>
+<li>Mechanical Engineering</li>
+<li>AI & Data Science</li>
+<li>Electrical & Computer</li>
+<li>AI & Machine learning</li>
+<li>Electronics & Communication</li>
+<li>Computer Application</li>
+</ul>
+</div>
+
+<div id="vision" class="page">
+<p><b>Vision:</b> To provide top class education to the community by achieving excellence in engineering education and mould world class engineers with competence, integrity and social commitment.</p>
+<p><b>Mission:</b> To provide the best faculty ,excellent infrastructure, commendable facilities for excellent academic ambiance to encourage research and development and to strengthen employability and campus placements.</p>
+</div>
+
+<div id="contact" class="page">
+<h2>Contact us</h2>
+
+<p>Office Mobile : +91 8281 98 75 56<br>
+Office WhatsApp  : +91 8848 00 65 95<br>
+Email            : info@meaec.edu.in</p>
+
+</div>
+
+</div>
+</body>
+</html>
