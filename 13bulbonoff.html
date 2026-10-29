@@ -1,0 +1,16 @@
+<html>
+<body>
+<img id="bulb" src="img_resource/off.png" width="300" height="453"><br>
+<button onclick="changeImage()">On/Off</button>
+<script>
+function changeImage() {
+  var img = document.getElementById("bulb");
+  if (img.src.includes("img_resource/off.png")) {
+    img.src = "img_resource/on.png";
+  } else {
+    img.src = "img_resource/off.png";
+  }
+}
+</script>
+</body> </html>
+
