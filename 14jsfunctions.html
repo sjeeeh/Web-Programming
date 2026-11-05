@@ -1,31 +1,70 @@
 <html>
 <body>
 <h2>String Object functions</h2>
+<p>The String object in JavaScript is a built-in object used to store, manipulate, and perform operations on text (a sequence of characters). It provides methods to change case, find characters, extract parts of a string, and replace text.</p>
+<pre>
+text.length 
+text.toUpperCase() 
+text.toLowerCase() 
+text.trim() 
+text.charAt(6) 
+text.indexOf("script")
+text.replace("Java", "ECMA")
+text.slice(1, 5)
+text.concat(" is awesome!")
+</pre>
+<button onclick="showstr()">Show functions</button>
+<p id="strmethod"></p><br>
+
 <script>
-let str="Hello World";
-document.write("Original string : "+ str +"<br>");
-document.write("Length : "+str.length+"<br>");
-document.write("Uppercase : "+ str.toUpperCase() +"<br>");
-document.write("Lowercase : "+ str.toLowerCase() +"<br>");
-document.write("Character at index 1 : "+ str.charAt(1) +"<br>");
-document.write("Position of 'W' : "+ str.indexOf("W") +"<br>");
-document.write("Extracted string : "+ str.slice(6,11) +"<br>");
-document.write("Replace world : "+ str.replace("World","JS") +"<br>");
-</script><br>
+function showstr(){
+let text="Java Script";
+document.getElementById("strmethod").innerHTML=
+`Original String: ${text}<br>
+Length: ${text.length}<br>
+Uppercase: ${text.toUpperCase()}<br>
+Lowercase: ${text.toLowerCase()}<br>
+Trimmed: ${text.trim()}<br>
+Character at 6: ${text.charAt(6)}<br>
+Index of script: ${text.indexOf("script")}<br>
+Replaced: ${text.replace("Java", "ECMA")}<br>
+Slice(1, 5): ${text.slice(1, 5)}<br>
+Concatenated: ${text.concat(" is awesome!")}`;
+}
+</script>
+
 <h2>Math Object functions</h2>
+<p>The Math object in JavaScript is a built-in object that provides properties and methods to perform mathematical operations such as addition, subtraction, rounding, finding square roots, and generating random numbers.</p><br>
+<pre>
+Math.PI 
+Math.sqrt(25) 
+Math.pow(2, 3) 
+Math.abs(-10) 
+Math.ceil(4.3) 
+Math.floor(4.9) 
+Math.round(4.5) 
+Math.random() 
+Math.max(10, 20, 30) 
+Math.min(10, 20, 30) 
+</pre>
+<button onclick="showmath()">Show functions</button>
+<p id="mthmethod"></p>
+
 <script>
-let num=5.4;
-document.write("Number : "+ num +"<br>");
-document.write("Round : "+ Math.round(num) +"<br>");
-document.write("Ceil : "+ Math.ceil(num) +"<br>");
-document.write("Floor : "+ Math.floor(num) +"<br>");
-document.write("Square root(25) : "+ Math.sqrt(25) +"<br>");
-document.write("Power(5^3) : "+ Math.pow(5,3) +"<br>");
-document.write("Absolute value(-10) : "+ Math.abs(-10) +"<br>");
-document.write("Maximum (10,20,30) : "+ Math.max(10,20,30) +"<br>");
-document.write("Minimum (10,20,30) : "+ Math.min(10,20,30) +"<br>");
-document.write("Random no. : "+ Math.random() +"<br>");
-document.write("Pi : "+ Math.PI +"<br>");
+function showmath(){
+let num=9.8;
+document.getElementById("mthmethod").innerHTML=
+`PI: ${Math.PI}<br>
+Square Root of 25: ${Math.sqrt(25)}<br>
+2 Power 3: ${Math.pow(2, 3)}<br>
+Absolute Value of -10: ${Math.abs(-10)}<br>
+Ceil(4.3): ${Math.ceil(4.3)}<br>
+Floor(4.9): ${Math.floor(4.9)}<br>
+Round(4.5): ${Math.round(4.5)}<br>
+Random (0-1): ${Math.random()}<br>
+Maximum (10, 20, 30): ${Math.max(10, 20, 30)}<br>
+Minimum (10, 20, 30): ${Math.min(10, 20, 30)}`;
+}
 </script>
 </body>
 </html>

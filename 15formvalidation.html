@@ -1,4 +1,12 @@
 <html>
+<head>
+<style>
+span{
+  color: red;
+  font-size: 14px;
+}
+</style>
+</head>
 <body>
 <h1>STUDENT REGISTRATION FORM</h1>
 <form onsubmit="return validateForm()">
@@ -6,17 +14,17 @@
 
 <tr>
 <td>FIRTS NAME:</td>
-<td><input type="text" id="name"></td>
+<td><input type="text" id="fname"><span id="fnameError"></span></td>
 </tr>
 
 <tr>
 <td>LAST NAME:</td>
-<td><input type="text"></td>
+<td><input type="text" id="lname"><span id="lnameError"></td>
 </tr>
 
 <tr>
 <td>EMAIL ID:</td>
-<td><input type="text" id="email"></td>
+<td><input type="text" id="email"><span id="emailError"></span></td>
 </tr>
 
 <tr>
@@ -26,7 +34,7 @@
 
 <tr>
 <td>MOBILE NUMBER:</td>
-<td><input type="text" id="mobile" maxlength=10></td>
+<td><input type="text" id="mobile" maxlength=10><span id="mobError"></span></td>
 </tr>
 
 <tr>
@@ -152,23 +160,66 @@
 <script>
 function validateForm(){
 
-let name=document.getElementById("name").value;
-if(!name){
-  alert("Please enter your name!");
-  return false;
+let valid=true;
+
+let fname=document.getElementById("fname").value;
+if(!fname){
+  document.getElementById('fnameError').innerText=" First Name cannot be blank!";
+  valid=false;
+}
+else if(!/^[a-zA-Z]+$/.test(fname)){
+  document.getElementById('fnameError').innerText=" Please enter valid name!";
+  valid=false;
+}
+else{
+  document.getElementById('fnameError').innerText="";
+}
+
+let lname=document.getElementById("lname").value;
+if(!lname){
+  document.getElementById('lnameError').innerText=" Last Name cannot be blank!";
+  valid=false;
+}
+else if(!/^[a-zA-Z]+$/.test(lname)){
+  document.getElementById('lnameError').innerText=" Please enter valid name!";
+  valid=false;
+}
+else{
+  document.getElementById('lnameError').innerText="";
 }
 
 let email=document.getElementById("email").value;
-if(!email.includes('@')||!email.includes('.')){
-  alert("Enter a valid email!");
-  return false;
+if(!email){
+  document.getElementById('emailError').innerText=" Email cannot be blank!";
+  valid=false;
+}
+else if(!email.includes('@')||!email.includes('.')){
+  document.getElementById('emailError').innerText=" Enter a valid email address!";
+  valid=false;
+}
+else{
+  document.getElementById('emailError').innerText="";
 }
 
 let mobile=document.getElementById("mobile").value;
-if(mobile.length!=10||isNaN(mobile)){
-  alert("Enter a 10 digit valid mobile number");
-  return false;
+if(!mobile){
+  document.getElementById('mobError').innerText=" Mobile number cannot be blank!";
+  valid=false;
 }
+else if(mobile.length!=10||isNaN(mobile)){
+  document.getElementById('mobError').innerText=" Enter a valid Mobile number!";
+  valid=false;
+}
+else{
+  document.getElementById('mobError').innerText="";
+}
+
+if(valid){
+  return true;
+}
+
+return false;
+
 }
 </script>
 </body>
